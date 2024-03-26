@@ -10,16 +10,13 @@ export class Participant extends Document {
   @Prop( { required: true })
   lastname: string;
 
-  @Prop({ minlength: 8, required: true })
-  password: string;
-
-  @Prop( { required: true })  
+  @Prop( { unique: true, index: true ,required: true })  
   email: string;
 
   @Prop( { required: true })  
   phone: string;
 
-  @Prop( { unique: true, index: true, required: true })  
+  @Prop( { required: true })  
   location: string;
 
   @Prop( { required: true })

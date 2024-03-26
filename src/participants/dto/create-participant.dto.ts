@@ -12,12 +12,6 @@ export class CreateParticipantDto {
 
   @IsNotEmpty()
   @IsString()
-  @IsAlphanumeric()
-  @MinLength(8)
-  password: string;
-
-  @IsNotEmpty()
-  @IsString()
   @IsEmail()
   email: string;
 

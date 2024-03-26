@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ParticipantsService } from './ParticipantsService';
+import { ParticipantsService } from './participants.service';
 import { ParticipantsController } from './participants.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Participant, ParticipantsSchema } from './entities/participant.entity';

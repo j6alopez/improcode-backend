@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, HttpStatus, Query } from '@nestjs/common';
-import { ParticipantsService } from './ParticipantsService';
+import { ParticipantsService } from './participants.service';
 import { CreateParticipantDto } from './dto/create-participant.dto';
 import { UpdateParticpantDto } from './dto/update-participant.dto';
 import { PaginationDto } from 'src/common/dto/pagination.dto';
