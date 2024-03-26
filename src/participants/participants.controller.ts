@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, HttpStatus, Query } from '@nestjs/common';
 import { ParticipantsService } from './participants.service';
 import { CreateParticipantDto } from './dto/create-participant.dto';
-import { UpdateParticpantDto } from './dto/update-participant.dto';
+import { UpdateParticipantDto } from './dto/update-participant.dto';
 import { PaginationDto } from 'src/common/dto/pagination.dto';
 import { ParseMongoIdPipe } from 'src/common/parse-mongo-id/parse-mongo-id.pipe';
 
@@ -25,7 +25,7 @@ export class ParticipantsController {
   }
 
   @Patch(':id')
-  update(@Param('id', ParseMongoIdPipe) id: string, @Body() updateParticipantDto: UpdateParticpantDto) {
+  update(@Param('id', ParseMongoIdPipe) id: string, @Body() updateParticipantDto: UpdateParticipantDto) {
     return this.participantsService.update(id, updateParticipantDto);
   }
 

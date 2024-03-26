@@ -2,7 +2,7 @@
 
 import { BadRequestException, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { CreateParticipantDto } from './dto/create-participant.dto';
-import { UpdateParticpantDto } from './dto/update-participant.dto';
+import { UpdateParticipantDto } from './dto/update-participant.dto';
 import { Model } from 'mongoose';
 import { Participant } from './entities/participant.entity';
 import { InjectModel } from '@nestjs/mongoose';
@@ -43,14 +43,14 @@ export class ParticipantsService {
   }
 
   async findOne(id: string) : Promise<Participant> {
-    const participant: Participant =  await this.participantModel.findById( id ).select(['-__v','-_id','-password']);
+    const participant: Participant =  await this.participantModel.findById( id ).select(['-__v']);
     if (!participant) {
       throw new NotFoundException(`Participant with id "${id}" not found`)
     }
     return participant;
   }
 
-  async update(id: string, updateParticipantDto: UpdateParticpantDto) {
+  async update(id: string, updateParticipantDto: UpdateParticipantDto) {
 
     const participant: Participant = await this.findOne(id);  
     try {
