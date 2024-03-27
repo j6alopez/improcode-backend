@@ -1,5 +1,3 @@
-
-
 import { BadRequestException, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { CreateParticipantDto } from './dto/create-participant.dto';
 import { UpdateParticipantDto } from './dto/update-participant.dto';
@@ -29,9 +27,8 @@ export class ParticipantsService {
     }
   }
 
-  async findAll( PaginationDto: PaginationDto ): Promise<Participant[]> {
-    const {limit = 10, offset = 0 } = PaginationDto;
-    console.log('aqui');
+  async findAll( paginationDto: PaginationDto ): Promise<Participant[]> {
+    const {limit = 10, offset = 0 } = paginationDto;
     return this.participantModel.find()
       .limit(limit)
       .skip(offset)
@@ -50,7 +47,7 @@ export class ParticipantsService {
     return participant;
   }
 
-  async update(id: string, updateParticipantDto: UpdateParticipantDto) {
+  async update(id: string, updateParticipantDto: UpdateParticipantDto) : Promise<Participant> {
 
     const participant: Participant = await this.findOne(id);  
     try {
@@ -63,7 +60,7 @@ export class ParticipantsService {
 
   }
 
-  async remove(id: string) {
+  async remove(id: string): Promise<void> {
     const { deletedCount } = await this.participantModel.deleteOne({ _id: id });
     if (deletedCount === 0) {
       throw new NotFoundException(`Participant with ${id} not found`);
