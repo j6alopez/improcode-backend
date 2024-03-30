@@ -20,8 +20,8 @@ export class CalendarEvent extends Document {
   all_day: boolean;
 
 
-  @Prop({ required: true })
-  color: string;
+  @Prop()
+  color?: string;
 
 }
 

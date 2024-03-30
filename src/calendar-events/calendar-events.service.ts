@@ -33,7 +33,7 @@ export class CalendarEventsService {
       .sort( {
         email: 'ascending'
       })
-      .select(['-__v', '-password' ]);
+      .select(['-__v' ]);
     
   }
 
