@@ -46,6 +46,7 @@ export class MapLocationsService {
     const mapLocation: MapLocation = await this.findOne(id);  
     try {
       await mapLocation.updateOne(updateMapLocationDto, { new: true });
+      const object = { ...mapLocation.toJSON(), ...updateMapLocationDto };
       return { ...mapLocation.toJSON(), ...updateMapLocationDto };
   
     } catch (error) {
