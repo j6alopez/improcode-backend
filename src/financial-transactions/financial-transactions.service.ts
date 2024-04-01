@@ -32,7 +32,7 @@ export class FinancialTransactionsService {
       .limit( limit )
       .skip( offset )
       .sort( {
-        email: 'ascending'
+        date: 'ascending'
       } )
       .select( [ '-__v', ] );
 

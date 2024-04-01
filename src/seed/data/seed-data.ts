@@ -24,7 +24,7 @@ export const initialData: SeedData = {
   transactions: [
     {
       "type": TransactionType.INCOME,
-      "amount": 1000.11,
+      "amount": 120.11,
       "currency": 'EUR',
       "concept": "Salary",
       "date": "2024-03-01"
@@ -74,7 +74,7 @@ export const initialData: SeedData = {
     },
     {
       "type": TransactionType.INCOME,
-      "amount": 1500,
+      "amount": 150,
       "currency": 'EUR',
       "concept": "Bonus",
       "date": "2024-03-28"
@@ -84,7 +84,7 @@ export const initialData: SeedData = {
       "amount": 100,
       "currency": 'EUR',
       "concept": "Electricity Bill",
-      "date": "2024-03-05",
+      "date": "2024-05-05",
       "category": "Utilities"
     },
     {
@@ -98,7 +98,7 @@ export const initialData: SeedData = {
     },
     {
       "type": TransactionType.INCOME,
-      "amount": 300,
+      "amount": 100,
       "currency": 'EUR',
       "concept": "Investment Dividends",
       "date": "2024-03-30"
