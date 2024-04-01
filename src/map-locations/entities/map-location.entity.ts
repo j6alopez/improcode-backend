@@ -13,6 +13,9 @@ export class MapLocation extends Document {
   @Prop( { required: true })  
   zoom: number;
 
+  @Prop( { required: true })  
+  color: string;
+
 }
 
 export const MapLocationsSchema = SchemaFactory.createForClass(MapLocation);

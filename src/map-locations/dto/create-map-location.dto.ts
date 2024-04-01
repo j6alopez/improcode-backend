@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNumber, isNotEmpty } from "class-validator";
+import { IsNotEmpty, IsNumber, IsString, isNotEmpty } from "class-validator";
 
 export class CreateMapLocationDto {
 
@@ -13,4 +13,8 @@ export class CreateMapLocationDto {
   @IsNotEmpty()
   @IsNumber()
   zoom: number;
+
+  @IsNotEmpty()
+  @IsString()
+  color: string;
 }
