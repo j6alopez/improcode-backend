@@ -1,4 +1,4 @@
-import { IsAlphanumeric, IsEmail, IsNotEmpty, IsNumber, IsString, MinLength } from "class-validator";
+import { IsEmail, IsNotEmpty, IsString, MinLength } from "class-validator";
 
 export class CreateParticipantDto {
 
@@ -19,10 +19,6 @@ export class CreateParticipantDto {
   @IsString()
   @MinLength(9)
   phone: string;
-
-  @IsNotEmpty()
-  @IsString()
-  location: string;
 
   @IsNotEmpty()
   @IsString()

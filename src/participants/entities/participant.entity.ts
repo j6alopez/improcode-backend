@@ -16,9 +16,6 @@ export class Participant extends Document {
   @Prop( { required: true })  
   phone: string;
 
-  @Prop( { required: true })  
-  location: string;
-
   @Prop( { required: true })
   distance: string;
 }
