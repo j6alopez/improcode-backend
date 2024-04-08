@@ -18,10 +18,9 @@ Having installed docker in your computer
 ```
 docker-compose up -d
 ```
+4. Run the app: ```npm run start:dev```
 
-4. Execute a SEED with a POST request to fill the DB with test data 
+5. Execute a SEED with a POST request to fill the DB with test data 
 ```
-http://localhost:3000/api/seed
+http://localhost:3000/api/v1/seed
 ```
-
-5. Run the app: ```npm run start:dev```
